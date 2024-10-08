@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 5</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        
+        .container {
+            background-color: grey;
+            border-radius: 15px;
+            margin-top: 16px;
+            margin-left: 400px;
+            margin-right: 400px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+        }
+
+        .header {
+            display: flex;
+        }
+
+        .gambarunindra {
+            margin-top: 10px;
+            margin-left: 30px;
+            margin-bottom: 10px;
+            width: 150px;
+        }
+
+        .wrap {
+            text-align: center;
+            margin-top: 35px;
+            margin-left: 50px;
+        }
+
+        .panjang {
+            margin: 0;
+            
+        }
+
+        .pendek {
+            margin: 0;
+        }
+
+        .panjang2 {
+            padding-top: 0px;
+            border-top: 0px;
+            margin-top: 0px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        h2 {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        #FormBiodata {
+            margin-left: 30px;
+        }
+
+        #FormBiodata input {
+            margin-bottom: 7px;
+        }
+        #FormBiodata input[type="text"], input[type="email"], input[type="phone"] {
+            width: 645px;
+            height: 20px;
+        }
+
+        .agama {
+            margin-bottom: 2px;
+            font-weight: bold;
+        }
+
+        .agama label, input {
+            cursor: pointer;
+        }
+
+        .tanggalpendidikan {
+            display: flex;
+            justify-content: space-between;
+            margin-right: 20px;
+        }
+        
+        .tanggalpendidikan div {
+            flex: 1;
+            margin-right: 20px;
+        }
+        
+        .tanggalpendidikan input, .tanggalpendidikan select {
+            width: 100%;
+        }
+
+        #button {
+            width: 645px;
+            height: 20px;
+            border-radius: 7px;
+            background-color: rgb(182, 180, 180);
+            border-color: black;
+            text-align: center;
+            font-size: medium;
+            cursor: pointer;
+        }
+
+        #button:hover {
+            background-color: white;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="unindra.png" alt="logo unindra" class="gambarunindra">
+            <div class="wrap">  
+                <h1 class="panjang">Universitas Indraprasta PGRI</h1>
+                <h1 class="pendek">(UNINDRA)</h1>
+                <h3 class="panjang2">Jl. Nangka No. 58 Tanjung Barat - Jaksel</h3>
+            </div>
+        </div>
+        <hr size:7px width="100%" align="center"color="black">
+        <h2 align="center">Biodata Mahasiswa</h2>
+        <form action="" id="FormBiodata">
+                    <label for="Nama">Nama</label> <br>
+                    <input type="text"> <br>
+            <label for="Alamat">Alamat</label> <br>
+            <input type="text"> <br>
+            <div class="tanggalpendidikan">
+                <div>
+                    <label for="TanggalLahir">Tanggal Lahir</label> <br>
+                    <input type="date">
+                </div>
+                <div>
+                    <label for="PendidikanTerakhir">Pendidikan Terakhir</label> <br>
+                    <select name="PendidikanTerakhir">
+                        <option value="Pilihan 1" disabled selected>Pilihan</option>
+                        <option value="SMP">Sekolah Menengah Pertama (SMP)</option>
+                        <option value="SMAK">Sekolah Menengah Atas/Kejuruan (SMA/K)</option>
+                        <option value="S1">Sarjana 1 (S1)</option>
+                        <option value="TidakMenjawab">Tidak Menjawab</option>
+                    </select>
+                </div>
+            </div>
+            <div class="agama">
+                <label for="islam">Agama</label> <br>
+                <input type="radio" id="islam" name="Agama" value="Islam">
+                <label for="islam">Islam</label> <br>
+                <input type="radio" id="kristen" name="Agama" value="Kristen">
+                <label for="kristen">Kristen</label> <br>
+                <input type="radio" id="hindu" name="Agama" value="Hindu">
+                <label for="hindu">Hindu</label> <br>
+            </div>
+            <label for="Telepon">Telepon</label> <br>
+            <input type="phone"> <br>
+            <label for="Email">Email</label> <br>
+            <input type="email"> <br>
+            <label for="file">File Portofolio</label> <br>
+            <input type="file"> <br>
+            <input id="button" value="Submit" onclick="alert('Data Anda Sudah Kami Simpan.')"> <br>
+            <input id="button" value="Reset" onclick="document.getElementById('FormBiodata').reset();">
+        </form>
+    </div>
+</body>
+</html>
